@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>AWSTranscriptToVTT.NET</PackageId>
+    <Product>AWSTranscriptToVTT.NET</Product>
+    <Authors>Yazan Kioumgi</Authors>
+    <Description>Convert the JSON retuned from AWS Transcribe to WebVTT format</Description>
+    <Copyright>MIT License Copyright © 2018 yazanpro</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/yazanpro/aws-transcribe-to-vtt-.net</PackageProjectUrl>
+    <PackageTags>AWSSDK.TranscribeService</PackageTags>
+    <PackageReleaseNotes>Usage:
+TranscriptToVTT.TranscriptToVTTManager.GetVTTFromAWSTranscribeJson</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

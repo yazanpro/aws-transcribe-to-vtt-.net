@@ -16,6 +16,7 @@ namespace AWSTranscribeToVTT
                 Console.WriteLine("Oops! it looks like the following AWS transcription JSON file is either missing or inaccessible:");
                 Console.WriteLine(jsonFilePath);
                 Console.ReadKey();
+                return;
             }
 
             Console.WriteLine("The following AWS transcription JSON file will be converted into a WebVTT format:");

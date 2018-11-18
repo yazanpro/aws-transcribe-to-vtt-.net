@@ -6,7 +6,7 @@ namespace TranscriptToVTT.AWS
     {
         public string Start_Time { get; set; }
         public string End_Time { get; set; }
-        public List<TranscriptResultItemAlternatives> Alternatives { get; set; }
+        public List<TranscriptResultItemAlternative> Alternatives { get; set; }
         /// <summary>
         /// Possible observed values are: "pronunciation" and "punctuation" (The reason this is not defined as an enum is in case Amazon added more values)
         /// </summary>

@@ -1,6 +1,6 @@
 ﻿namespace TranscriptToVTT.AWS
 {
-    public class TranscriptResultItemAlternatives
+    public class TranscriptResultItemAlternative
     {
         public string Confidence { get; set; }
         public string Content { get; set; }

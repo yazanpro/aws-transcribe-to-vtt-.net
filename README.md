@@ -9,8 +9,8 @@ Usage:
   
     json (string): The JSON content to be processed
     
-    maxCharsPerCaption (int): The limit in which the length of the individual caption doesn't exceed
+    maxCharsPerCaption (int): The limit in which the length of the individual caption doesn't exceed (80 characters suggested)
     
-    maxTimePerCaption (TimeSpan): The limit in which the duration of the individual caption doesn't exceed
+    maxTimePerCaption (TimeSpan): The limit in which the duration of the individual caption doesn't exceed (5 seconds suggested)
     
     out transcript (string): The entire transcript in plain text

@@ -109,7 +109,7 @@ namespace TranscriptToVTT
                     runningContent.Clear();
                 }
             }
-            
+
             return "WEBVTT" + Environment.NewLine + Environment.NewLine + vtt.ToString();
         }
 

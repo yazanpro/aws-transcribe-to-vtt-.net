@@ -69,8 +69,8 @@ namespace TranscriptToVTT
                                 alternative.ReplaceiWithI();
 
                                 // Amazon uses seconds and milliseconds only
-                                TimeSpan startTime = new TimeSpan(0, 0, 0, startSec, startMil);
-                                TimeSpan endTime = new TimeSpan(0, 0, 0, endSec, endMil);
+                                var startTime = new TimeSpan(0, 0, 0, startSec, startMil);
+                                var endTime = new TimeSpan(0, 0, 0, endSec, endMil);
 
                                 // Handle the first iteration
                                 if (!isStarted)
@@ -109,12 +109,8 @@ namespace TranscriptToVTT
                     runningContent.Clear();
                 }
             }
-
-            if (vtt.Length == 0)
-                return string.Empty;
-
-            string result = "WEBVTT" + Environment.NewLine + Environment.NewLine + vtt.ToString();
-            return result;
+            
+            return "WEBVTT" + Environment.NewLine + Environment.NewLine + vtt.ToString();
         }
 
         private static void AppendToVTT(StringBuilder vtt, TimeSpan startTime, TimeSpan endTime, string content)

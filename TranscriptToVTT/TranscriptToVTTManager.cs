@@ -11,9 +11,9 @@ namespace TranscriptToVTT
         /// Processes the JSON returned from AWS Transcribe and converts it to WebVTT format
         /// </summary>
         /// <param name="json">The JSON content to be processed</param>
-        /// <param name="maxCharsPerCaption">The limit in which the length of the individual caption doesn't exceed
+        /// <param name="maxCharsPerCaption">The limit in which the length of the individual caption doesn't exceed. Suggested value: 80
         /// (the algorithm might tolerate this value slightly for best result)</param>
-        /// <param name="maxTimePerCaption">The limit in which the duration of the individual caption doesn't exceed
+        /// <param name="maxTimePerCaption">The limit in which the duration of the individual caption doesn't exceed. Suggested value: new TimeSpan(0, 0, 5)
         /// (The algorithm might tolerate this value slightly for best result)</param>
         /// <param name="transcript">The entire transcript in plain text</param>
         /// <returns>The WebVTT content</returns>

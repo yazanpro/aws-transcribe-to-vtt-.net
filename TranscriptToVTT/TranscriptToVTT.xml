@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TranscriptToVTT</name>
+    </assembly>
+    <members>
+        <member name="T:TranscriptToVTT.AWS.AmazonTranscript">
+            <summary>
+            The root class in which the JSON returned from AWS Transcribe will be deserialized into
+            </summary>
+        </member>
+        <member name="P:TranscriptToVTT.AWS.TranscriptResultItem.Type">
+            <summary>
+            Possible observed values are: "pronunciation" and "punctuation" (The reason this is not defined as an enum is in case Amazon added more values)
+            </summary>
+        </member>
+        <member name="M:TranscriptToVTT.AWS.TranscriptResultItemAlternative.ReplaceiWithI">
+            <summary>
+            capitalize the small letter i when necessary (as in I'm good, I told you)
+            </summary>
+        </member>
+        <member name="M:TranscriptToVTT.TranscriptToVTTManager.GetVTTFromAWSTranscribeJson(System.String,System.Int32,System.TimeSpan,System.String@)">
+            <summary>
+            Processes the JSON returned from AWS Transcribe and converts it to WebVTT format
+            </summary>
+            <param name="json">The JSON content to be processed</param>
+            <param name="maxCharsPerCaption">The limit in which the length of the individual caption doesn't exceed
+            (the algorithm might tolerate this value slightly for best result)</param>
+            <param name="maxTimePerCaption">The limit in which the duration of the individual caption doesn't exceed
+            (The algorithm might tolerate this value slightly for best result)</param>
+            <param name="transcript">The entire transcript in plain text</param>
+            <returns>The WebVTT content</returns>
+        </member>
+    </members>
+</doc>

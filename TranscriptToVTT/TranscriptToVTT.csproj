@@ -10,8 +10,11 @@
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/yazanpro/aws-transcribe-to-vtt-.net</PackageProjectUrl>
     <PackageTags>AWSSDK.TranscribeService</PackageTags>
-    <PackageReleaseNotes>Usage:
-TranscriptToVTT.TranscriptToVTTManager.GetVTTFromAWSTranscribeJson</PackageReleaseNotes>
+    <PackageReleaseNotes>
+      Usage:
+      TranscriptToVTT.TranscriptToVTTManager.GetVTTFromAWSTranscribeJson
+    </PackageReleaseNotes>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

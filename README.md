@@ -1,6 +1,10 @@
 # aws-transcribe-to-vtt-.net
 Convert the JSON returned from AWS Transcribe to WebVTT format
 
+NuGet:
+
+    Install-Package AWSTranscriptToVTT.NET
+
 Usage:
   
     TranscriptToVTT.TranscriptToVTTManager.GetVTTFromAWSTranscribeJson

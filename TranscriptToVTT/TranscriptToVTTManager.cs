@@ -44,7 +44,8 @@ namespace TranscriptToVTT
 
                     if (item.Alternatives?.Count > 0)
                     {
-                        // If there are more than 1 alternative, we only use the first once. Hopefully alternatives are natively sorted by confidence
+                        // If there is more than one alternative, we only use the first once.
+                        // Hopefully alternatives are natively sorted by confidence
                         var alternative = item.Alternatives[0];
 
                         // Possible observed values are: "pronunciation" and "punctuation"
@@ -94,7 +95,7 @@ namespace TranscriptToVTT
                                     runningStartTime = startTime;
                                     runningEndTime = endTime;
                                 }
-                                // Append the alternative (a word) to the running value
+                                // Append the alternative (a word) to the running content
                                 runningContent.Append(alternative.Content).Append(" ");
                                 runningEndTime = endTime;
                             }
@@ -110,16 +111,16 @@ namespace TranscriptToVTT
                 }
             }
 
-            return "WEBVTT" + Environment.NewLine + Environment.NewLine + vtt.ToString();
+            return vtt.ToString();
         }
 
         private static void AppendToVTT(StringBuilder vtt, TimeSpan startTime, TimeSpan endTime, string content)
         {
-            if (vtt.Length > 0)
-            {
-                vtt.Append(Environment.NewLine);
-                vtt.Append(Environment.NewLine);
-            }
+            if (vtt.Length == 0)
+                vtt.Append("WEBVTT");
+
+            vtt.Append($"{Environment.NewLine}{Environment.NewLine}");
+
             vtt.Append(startTime.Hours.ToString("D2"));
             vtt.Append(":");
             vtt.Append(startTime.Minutes.ToString("D2"));

@@ -6,7 +6,7 @@
         public string Content { get; set; }
 
         /// <summary>
-        /// capitalize the small letter i when necessary (as in I'm good, I told you)
+        /// capitalize the small letter i when necessary (as in "I'm good" and "I told you")
         /// </summary>
         public void ReplaceiWithI()
         {

@@ -2,7 +2,7 @@
 using System.IO;
 using TranscriptToVTT;
 
-namespace AWSTranscribeToVTT
+namespace TranscribeToVTTDemo
 {
     class Program
     {

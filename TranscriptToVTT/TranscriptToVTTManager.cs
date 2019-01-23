@@ -80,8 +80,10 @@ namespace TranscriptToVTT
                                     isStarted = true;
                                 }
 
-                                // threshold check
-                                if (endTime - runningStartTime > maxTimePerCaption || runningContent.Length > maxCharsPerCaption)
+                                // If silence for longer than 2 seconds, or if the threshold is exceeded
+                                if ((startTime - runningEndTime).TotalSeconds > 2d
+                                    || endTime - runningStartTime > maxTimePerCaption
+                                    || runningContent.Length > maxCharsPerCaption)
                                 {
                                     // If the caption has just started then we don't append the running content just yet
                                     if (runningContent.Length > 0)
